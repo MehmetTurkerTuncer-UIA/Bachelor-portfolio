@@ -1,32 +1,23 @@
-import logo from  "../assets/uialogo.png"
-import{ FaLinkedin } from "react-icons/fa"
-import{ FaGithub } from "react-icons/fa"
-import{ FaSquareXTwitter } from "react-icons/fa6"
-import{ FaInstagram } from "react-icons/fa"
-import Hjem from './Hjem.jsx' 
+import React from 'react';
+import logo from "../assets/uialogo.png";
 
 const Navbar = () => {
   return (
-    <nav className=' mb-20 flex items-center justify-between py-6  '> 
+    <nav className='mb-20 flex items-center justify-between py-6'>
+      <div className='flex flex-shrink-0 items-center'>
+        <img className="mx-2 w-20 border-r-2" src={logo} alt="logo" />
+        <h3  className='text-3xl p-2 font-bold className= hover:text-yellow-500'>GRUPPE - 7</h3>
+      </div>
 
- 
-    <div className='flex flex-shrink-0 items-center'>
-
-    <img className="mx-2 w-20" src={logo} alt="logo" />
-
-    </div>
-
-
-    <div className="m-8 flex items-center justify-center gap-5 text-5xl ">
-       <Hjem/>
-        <FaLinkedin/>
-        <FaGithub/>
-        <FaSquareXTwitter/>
-        <FaInstagram/>
-        
-    </div>
+      <div className="m-8 flex items-center justify-center gap-8 text-3xl">
+        <a href="#hjem" className="hover:text-yellow-500">Hjem</a>
+        <a href="#om-oss" className="hover:text-yellow-500">Om oss</a>
+        <a href="#medlemmer" className="hover:text-yellow-500">Medlemmer</a>
+        <a href="#technologies" className="hover:text-yellow-500">Technologies</a>
+        <a href="#projects" className="hover:text-yellow-500">Projects</a>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,22 +1,51 @@
 import React from 'react';
+import {motion} from 'framer-motion';
+import myImage from '../assets/uia grup.jpeg'; // Adjust this path
 
 const Om_Oss = () => {
   return (
     <div className="flex items-center justify-center py-4 px-4">
-      <div className="max-w-6xl text-center">
-        <h1 className="text-4xl font-bold mb-4">Medlemmer</h1>
-        <p className="mb-4">
-          Gruppen vår har en sterk interesse for digitalisering og ønsker primært å fokusere på utvikling av nettbaserte løsninger, spesielt webapplikasjoner og design prosjekter. Vi er alle engasjerte i å utforske potensialet innen tjenestedesign, universell utforming, dataanalyse og sikkerhet, noe som reflekterer vår felles nysgjerrighet for hvordan teknologi kan brukes til å løse komplekse problemer på innovative måter.
-        </p>
-        <p className="mb-4">
-          Vår gruppe har fullført en rekke kurs hos Clarusway som dekker et bredt spekter av teknologier innen webutvikling, fra front-end til back-end ved siden av studie. Vi har tilegnet oss ferdigheter i webutviklingsgrunnlag, spesialisert oss i React, JavaScript noe som utstyrer oss til å bygge robuste, brukervennlige webapplikasjoner. Disse kursene har ikke bare gitt oss teknisk dyktighet, men også en forståelse for samarbeid og prosjektledelse, forbereder oss til å bidra i et dynamisk teknologisk landskap. Vi er nysgjerrige, læringsorienterte og ivrige etter å anvende vår ekspertise i praksis.
-        </p>
-        <p>
-          Denne bakgrunnen utstyrer oss med de nødvendige ferdighetene for å takle utfordringer innen digitalisering, fra idefasen til implementering, med en helhetlig forståelse av teknologiske løsninger.
-        </p>
+      <div className="max-w-12xl flex flex-col lg:flex-row text-center lg:text-left">
+
+        <motion.div
+          className="lg:w-1/2"
+          whileInView={{opacity: 1, x: 0}}
+          initial={{opacity: 0, x: -100}}
+          transition={{duration: 0.8}}
+        >
+          <h1 className="text-4xl font-bold mb-5 text-center">Om oss</h1>
+          <p className="mb-4 text-2xl">
+          Vår gruppe har en sterk interesse for digitalisering, med fokus på utvikling av nettbaserte løsninger som webapplikasjoner og designprosjekter. Vi er engasjerte i å utforske tjenestedesign, universell utforming, dataanalyse og sikkerhet, drevet av nysgjerrighet på hvordan teknologi kan løse komplekse problemer.
+          </p>
+          <p className="mb-4 text-2xl">
+          Gruppen vår har gjennomført flere kurs hos Clarusway, hvor vi har tilegnet oss ferdigheter innen både front-end og back-end webutvikling, spesielt i React og JavaScript. Disse kursene har ikke bare styrket vår tekniske kompetanse, men også gitt oss innsikt i samarbeid og prosjektledelse, slik at vi er godt forberedt på å bidra i et dynamisk teknologisk miljø. Vi er læringsorienterte og ivrige etter å anvende vår kunnskap i praksis.
+          </p>
+          <p className="text-2xl">
+            Denne bakgrunnen utstyrer oss med de nødvendige ferdighetene for å takle utfordringer innen digitalisering, fra idefasen til implementering, med en helhetlig forståelse av teknologiske løsninger.
+          </p>
+          <div className="w-full flex justify-end mt-9">
+            <h1 className="text-4xl font-bold mt-12 mb-5 text-center">
+              Medlemmer
+            </h1>
+          </div>
+
+        </motion.div>
+
+        <motion.div
+          className="lg:w-1/2 lg:pl-10 flex items-center justify-center"
+          whileInView={{opacity: 1, x: 0}}
+          initial={{opacity: 0, x: 100}}
+          transition={{duration: 0.8}}
+        >
+          <img
+            src={myImage}
+            alt="Our Team"
+            className="rounded-lg shadow-lg mt-1 mb-16 lg:w-2/3 lg:h-auto"
+          />
+        </motion.div>
       </div>
     </div>
   );
-}
+};
 
 export default Om_Oss;
