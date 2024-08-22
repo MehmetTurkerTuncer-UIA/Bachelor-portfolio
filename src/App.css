@@ -1,0 +1,25 @@
+/* Profil kartlarını içeren kapsayıcı */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Profil kartları küçük ekranlarda tam genişlikte olacak */
+  @media (max-width: 768px) {
+    .profile-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* Orta ve büyük ekranlar için profil kartları yan yana gelecek */
+  @media (min-width: 769px) {
+    .profile-card {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+  }
+  
